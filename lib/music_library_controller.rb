@@ -31,4 +31,10 @@ class MusicLibraryController
       input = gets.chomp
     end
   end
+  
+  def list_songs
+    Song.all.each{|song, index|
+      puts("#{index + 1}")
+    }
+  end
 end
