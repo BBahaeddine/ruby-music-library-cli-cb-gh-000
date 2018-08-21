@@ -34,7 +34,8 @@ class MusicLibraryController
   
   def list_songs
     Song.all.each{|song, index|
-      puts("#{(index + 1)}. #{song.artist.name} - #{song.name} - #{song.genre.name}")
+    position = index + 1
+      puts("#{position}. #{song.artist.name} - #{song.name} - #{song.genre.name}")
     }
   end
 end
